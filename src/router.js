@@ -1,9 +1,8 @@
 const express = require('express');
+const usersController = require('./Controllers/usersController'); // Fix the casing of the file path
 
 const router = express.Router();
 
-router.get('/users', (req, res) => {
-  res.send('Hello Worlddd!');
-});
+router.get('/users', usersController.getAll);
 
 module.exports = router;
